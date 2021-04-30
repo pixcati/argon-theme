@@ -1,12 +1,6 @@
-/*
-Theme Name: argon
-Author: solstice23
-Author URI: https://solstice23.top/
-Description: 轻盈、简洁、美观的 Wordpress 主题
-Version: 1.1.7
-License: GNU General Public License v3.0
-License URI: https://www.gnu.org/licenses/gpl-3.0.html
-Tags: 简约, 两栏, 侧栏在左边, 浮动侧栏, 文章目录, 自适应, 夜间模式, 可自定义
+/* 
+ Backup  :https://cdn.jsdelivr.net/gh/solstice23/argon-theme@master/style.css 
+ 
 */
 
 @charset "utf-8";
@@ -22,7 +16,7 @@ html.themecolor-toodark.darkmode{
 
 body{
 	background: #f4f5f7 !important;
-	font-family: 'Open Sans', -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimSun, sans-serif;
+	font: BlinkMacSystemFont,"Hiragino Sans GB","Microsoft YaHei","微软雅黑",sans-serif;
 }
 a{
 	transition: color .25s ease;
@@ -97,9 +91,6 @@ article .post-content a:before{
 }
 article .post-content a:hover:before{
 	transform: scaleX(1);
-}
-article .post-content a.no-hover-underline:before{
-	display: none;
 }
 article pre:not(.hljs-codeblock){
 	font-family: Consolas,Menlo,Monaco,'Andale Mono WT','Andale Mono','Lucida Console','Lucida Sans Typewriter','DejaVu Sans Mono','Bitstream Vera Sans Mono','Liberation Mono','Nimbus Mono L','Courier New',Courier,monospace;
@@ -267,9 +258,6 @@ html.use-big-shadow *.shadow-sm{
 .article-header-style-2 article h3:before {
 	height: 16px;
 	transform: translateY(-1px);
-}
-.no-results header h1:after{
-	display: none !important;
 }
 /*卡片圆角*/
 .card{
@@ -955,7 +943,7 @@ html.darkmode.amoled-dark #leftbar_tab_tools ul li {
 }
 /*底栏*/
 #footer{
-	background: var(--themecolor-gradient);
+	background-color: rgba(255, 255, 255, 0.0);
 	color: #fff;
 	width: 100%;
 	float: right;
@@ -1639,31 +1627,29 @@ html.darkmode.amoled-dark .tippy-box[data-theme~=light]{color:#eee;background-co
 .related-posts {
 	display: block;
 	white-space: nowrap;
+	overflow-x: auto;
 	margin-bottom: 25px;
-	padding: 0; 
-	padding-bottom: 0; 
+	padding: 15px;
+	padding-bottom: 5px;
 }
 .related-post-card {
 	display: inline-block;
-	height: 105px;
-	width: 180px;
+	height: 144px;
+	width: 256px;
+	overflow: hidden;
+	border: 1px solid rgba(108, 119, 147, 0.2);
 	border-radius: 5px;
 	margin-right: 10px;
-	font-size: 16px;
+	font-size: 18px;
 	line-height: 27px;
 	white-space: normal;
 	transition: all .3s ease;
 	position: relative;
-	background: var(--themecolor-gradient);
-	overflow: hidden;
 }
 .related-post-card:hover {
-	filter: brightness(0.9);
+	background: rgba(var(--themecolor-rgbstr), .1);
 	box-shadow: 0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08);
 	border-color: transparent;
-}
-.related-post-title.clamp {
-	color: white;
 }
 .related-post-card-container {
 	position: absolute;
@@ -1696,30 +1682,6 @@ html.darkmode.amoled-dark .tippy-box[data-theme~=light]{color:#eee;background-co
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
-}
-i.related-post-arrow.fa.fa-chevron-right {
-	color: white;
-}
-img.related-post-thumbnail {
-	vertical-align: unset;
-}
-html.darkmode a.related-post-card {
-	background: #303030;
-	opacity: 0.7;
-	border-radius: 5px;
-}
-html.darkmode .related-post-title.clamp {
-	color: var(--themecolor-light);
-}
-html.darkmode .has-thumbnail .related-post-title.clamp{
-	color: #eee;
-}
-html.darkmode.amoled-dark a.related-post-card {
-	background: #000;
-	opacity: 1.0;
-}
-html.darkmode.amoled-dark a.related-post-card:hover {
-	background: #0e0e0e;
 }
 /*文章赞赏*/
 .post-donate {
@@ -3066,9 +3028,6 @@ article img.lazyload[src^='data:image/svg+xml;base64,PCEtLUFyZ29uTG9hZGluZy0tPg'
 }
 
 /*Fancybox 样式*/
-.fancybox-wrapper{
-	width: max-content;
-}
 .fancybox-wrapper > img{
 	cursor: pointer;
 	cursor: -webkit-zoom-in;
@@ -3351,9 +3310,6 @@ html[class] , html[lang]{
 .shuoshuo-content p{
 	margin-bottom: 0;
 	line-height: 1.8;
-}
-.shuoshuo-content *{
-	max-width: 100%;
 }
 .shuoshuo-comments{
 	font-size: 14px;
@@ -3647,7 +3603,6 @@ code[hljs-codeblock-inner] {
 	left: 20px;
 	width: 30px;
 	overflow-x: visible !important;
-	white-space: nowrap;
 	transition: all .3s ease;
 	background: transparent !important;
 }
